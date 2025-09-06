@@ -1,7 +1,3 @@
-Here’s a polished and professional **README.md** for your AI-Powered Recipe Generator project:
-
----
-
 # AI-Powered Recipe Generator 🍳🤖
 
 ## Project Overview
@@ -100,7 +96,7 @@ python app.py
 
 ## License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. See the LICENSE file for details.
 
 ---
 
@@ -108,9 +104,3 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 **Shubhamay Santra**
 Passionate about AI, NLP, and making everyday life smarter through technology.
-
----
-
-If you want, I can also make a **more visually appealing GitHub README** with **badges, images, and table of contents** so it looks professional and attractive.
-
-Do you want me to do that?
