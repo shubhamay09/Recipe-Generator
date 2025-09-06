@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #fff7ed, #fef3c7);
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: -50px auto 0;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f97316;
+  border-radius: 1rem 1rem 0 0;
+  color: white;
+}
+
+.header-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.search-panel {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.input-wrapper input,
+.input-group select {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.filters-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.search-button {
+  background-color: #f97316;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #ea580c;
+}
+
+.search-button:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions li:hover {
+  background-color: #fff7ed;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image-container {
+  position: relative;
+  height: 200px;
+}
+
+.recipe-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cooking-time {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.recipe-content {
+  padding: 1.5rem;
+}
+
+.recipe-content h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #1f2937;
+}
+
+.recipe-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.recipe-ingredients {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .banner {
+    height: 200px;
+  }
+}
+
+/* Image */
+.app-wrapper .banner img{
+  display:inline-block;
+  width:100%;
+  position:relative;
+  left:0px;
+ }
+ 
+ /* App wrapper */
+ #root .app-wrapper{
+  left:0px;
+  width:100% !important;
+  margin-right:836px;
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+ /* Lucide chef hat */
+ .app-wrapper header .lucide-chef-hat{
+  display:inline-block;
+  transform:translatex(810px) translatey(113px);
+ }
+ 
+ /* Header */
+ .app-wrapper header{
+  padding-top:0px;
+  position:relative;
+  top:-66px;
+ }
+ 
+ /* Paragraph */
+ .app-wrapper header p{
+  font-size:24px;
+  position:relative;
+  top:-33px;
+ }
+ 
+ /* Search panel */
+ .app-wrapper .search-panel{
+  position:relative;
+  top:-95px;
+  left:-16px;
+ }
+ 
+/* Image */
+.app-wrapper .banner img{
+  display:inline-block;
+  width:100%;
+  position:relative;
+  left:0px;
+ }
+ 
+ /* App wrapper */
+ #root .app-wrapper{
+  left:0px;
+  width:100% !important;
+  margin-right:836px;
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+ /* Lucide chef hat */
+ .app-wrapper header .lucide-chef-hat{
+  display:inline-block;
+  transform:translatex(810px) translatey(113px);
+ }
+ 
+ /* Header */
+ .app-wrapper header{
+  padding-top:0px;
+  position:relative;
+  top:-66px;
+ }
+ 
+ /* Paragraph */
+ .app-wrapper header p{
+  font-size:24px;
+  position:relative;
+  top:-33px;
+ }
+ 
+ /* Search panel */
+ .app-wrapper .search-panel{
+  position:relative;
+  top:-95px;
+  left:-16px;
+ }
+ 
+ /* Recipe grid */
+ .app-wrapper .recipe-grid{
+  position:relative;
+  left:-164px;
+  top:-41px;
+ }
+ 
+ /* Recipe grid */
+ #root .app-wrapper .app-container .recipe-grid{
+  width:126% !important;
+ }
+  
