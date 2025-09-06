@@ -54,7 +54,7 @@ For a richer experience, the application can provide step-by-step instructions, 
 * **Libraries & Frameworks:**
 
   * NLP & AI: GPT models, Hugging Face Transformers
-  * Backend: Flask / Django / FastAPI
+  * Backend: Flask / Django / Spoonacular API
   * Frontend: React / PyQt5 (for GUI)
   * Data Handling: Pandas, NumPy
 * **Database:** Local or online APIs for recipe storage
